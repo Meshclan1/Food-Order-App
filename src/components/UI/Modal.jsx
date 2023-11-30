@@ -14,6 +14,6 @@ export default function Modal({ children, open, className = "" }) {
     <dialog ref={dialog} className={`modal ${className}`}>
       {children}
     </dialog>,
-    documentGetElementById("modal")
+    document.getElementById("modal")
   );
 }
