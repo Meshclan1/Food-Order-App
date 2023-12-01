@@ -22,7 +22,7 @@ export default function useHttp(url, config, initialData) {
     async function sendRequest() {
       setIsLoading(true);
       try {
-        const resData = sendHttpRequst(url, config);
+        const resData = await sendHttpRequst(url, config);
         setData(resData);
       } catch (error) {
         setError(error.message || "Something went wrong!");
